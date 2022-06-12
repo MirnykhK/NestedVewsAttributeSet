@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_holder"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_from_xml_2_elements2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="w input from_xml_2_elements"
+        app:endIconMode="clear_text"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_from_xml_2_elements2"
+            android:text = "text"
+            android:maxLines="1"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
+            tools:ignore="TextContrastCheck">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_from_xml2"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:text = "w input edit text from xml"
+        android:maxLines="1"
+        android:inputType="textCapSentences"
+        android:imeOptions="actionDone"
+        tools:ignore="TextContrastCheck">
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_only_group_w_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="w input only til"
+        app:endIconMode="clear_text"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"/>
+
+</LinearLayout>
