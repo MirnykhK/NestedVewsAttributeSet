@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.ContextThemeWrapper
 import com.google.android.material.textfield.TextInputEditText
 import ru.adminmk.testinputlayout.databinding.ActivityMainBinding
 import ru.adminmk.testinputlayout.databinding.DividerBinding
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getWInputEditText(): View {
         return TextInputEditText(
-            this,
+            ContextThemeWrapper(this, com.google.android.material.R.style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense),
             null,
             androidx.appcompat.R.attr.editTextStyle
         ).apply {
@@ -54,14 +55,14 @@ class MainActivity : AppCompatActivity() {
                 LinearLayout.LayoutParams.WRAP_CONTENT
             )
 
-            val margin16dp = this@MainActivity.dipToPixels(16f).toInt()
-
-            layoutParams.setMargins(
-                margin16dp,
-                margin16dp,
-                margin16dp,
-                0
-            )
+//            val margin16dp = this@MainActivity.dipToPixels(16f).toInt()
+//
+//            layoutParams.setMargins(
+//                margin16dp,
+//                margin16dp,
+//                margin16dp,
+//                0
+//            )
 
             this@apply.layoutParams = layoutParams
             this@apply.maxLines = 1
