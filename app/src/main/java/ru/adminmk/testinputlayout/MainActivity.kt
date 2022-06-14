@@ -18,9 +18,10 @@ import ru.adminmk.testinputlayout.databinding.DividerBinding
 private const val TAG = "EDIT_TEXT_TAG"
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val holder = binding.llHolder
@@ -33,20 +34,20 @@ class MainActivity : AppCompatActivity() {
 
         //-------------------
 
-        val editTextWInput = getWInputEditText()
-        holder.addView(editTextWInput)
-
-        addViewDivider(holder)
+//        val editTextWInput = getWInputEditText()
+//        holder.addView(editTextWInput)
+//
+//        addViewDivider(holder)
 
         Log.d(TAG, "et_from_xml_2_elements  ${binding.etFromXml2Elements2.paddingLeft}")
         Log.d(TAG, "et_from_xml ${binding.etFromXml2.paddingLeft}")
         Log.d(TAG, "et from constructor inside TIL ${editTextWInputForTIL.paddingLeft}")
-        Log.d(TAG, "et from constructor w input ${editTextWInput.paddingLeft}")
+//        Log.d(TAG, "et from constructor w input ${editTextWInput.paddingLeft}")
     }
 
     private fun getWInputEditText(): View {
         return TextInputEditText(
-            ContextThemeWrapper(this, com.google.android.material.R.style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense),
+            ContextThemeWrapper(binding.tilOnlyGroupWInput.context, R.style.ThemeOverlay_Style1),
             null,
             androidx.appcompat.R.attr.editTextStyle
         ).apply {

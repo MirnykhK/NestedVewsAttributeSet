@@ -5,4 +5,12 @@
         <item name="android:textColorHint">@color/text_input_layout_text_color_hint</item>
         <item name="helperTextTextColor">@color/text_input_layout_helper_text_text_color</item>
     </style>
+    <style name="ThemeOverlay.Style1" parent="">
+        <item name="android:editTextColor">@android:color/holo_red_dark</item>-->
+        <item name="editTextStyle">@style/CustomStyle1</item>
+    </style>
+    <style name="CustomStyle1" parent="Widget.MaterialComponents.TextInputEditText.FilledBox.Dense">
+        <item name="android:paddingLeft">100dp</item>
+        <item name="android:paddingStart">100dp</item>
+    </style>
 </resources>
